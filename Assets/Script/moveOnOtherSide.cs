@@ -8,6 +8,8 @@ public class moveOnOtherSide : MonoBehaviour {
 	private float movX;
 	private float movY;
 
+	public bool isMoving = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,16 +18,24 @@ public class moveOnOtherSide : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		if (side == "Left") {
-			movX = 1F;
-			movY = 0F;
-		} else if (side == "Right") {
-			movX = -1F;
-			movY = 0F;
-		}
+		if (isMoving) {
+			if (side == "Left") {
+				movX = 1F;
+				movY = 0F;
+			} else if (side == "Right") {
+				movX = -1F;
+				movY = 0F;
+			}
 			
-		transform.Translate (new Vector3(movX,movY)*Time.deltaTime*speed);
+			transform.Translate (new Vector3 (movX, movY) * Time.deltaTime * speed);
+			GetComponent<Animator> ().SetBool ("isWalking", true);
+		}
 	
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+
+		if (coll.gameObject.GetComponent<launchObject> ())
+			isMoving = true;
 	}
 }

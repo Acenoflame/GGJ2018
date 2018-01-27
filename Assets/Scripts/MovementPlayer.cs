@@ -5,6 +5,8 @@ public class MovementPlayer : MonoBehaviour {
 
 	public int _speed = 3;
 
+	public int _speed2 = 5;
+
     public Transform _player;
     public Transform _target;
 
@@ -18,7 +20,12 @@ public class MovementPlayer : MonoBehaviour {
     float movXRightStick;
     float movYRightStick;
 
+<<<<<<< HEAD
     private bool _canMove = true;
+=======
+	private float prevX;
+	private float prevY;
+>>>>>>> 76cc84a8e7e2aa97af65a02e76f6c80db5e477dc
 
     // Use this for initialization
     void Start () {
@@ -31,6 +38,7 @@ public class MovementPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+<<<<<<< HEAD
         if (_canMove)
         {
             movXLeftStick = Input.GetAxis(strXLeftStick);
@@ -42,6 +50,32 @@ public class MovementPlayer : MonoBehaviour {
             _target.Translate(new Vector3(movXRightStick, movYRightStick) * Time.deltaTime * _speed);
         }
 
+=======
+
+        movXLeftStick = Input.GetAxis(strXLeftStick);
+        movYLeftStick = Input.GetAxis(strYLeftStick);
+        movXRightStick = Input.GetAxis(strXRightStick);
+        movYRightStick = Input.GetAxis(strYRightStick);
+
+		if (movXLeftStick < 0)
+			_player.localScale.Scale (new Vector3 (-0.4F, _player.localScale.y, _player.localScale.z));
+		
+
+		_player.Translate (new Vector3 (movXLeftStick, movYLeftStick) * Time.deltaTime * _speed);
+			
+        _target.Translate (new Vector3(movXRightStick, movYRightStick) *Time.deltaTime* _speed2);
+
+		if (prevX != movXLeftStick || prevY != movYLeftStick)
+			GetComponent<Animator> ().SetBool ("isWalking",true);
+		else
+			GetComponent<Animator> ().SetBool ("isWalking",false);
+
+		prevX = movXLeftStick;
+		prevY = movYLeftStick;
+
+		GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 10f) * -1;
+
+>>>>>>> 76cc84a8e7e2aa97af65a02e76f6c80db5e477dc
 	}
 
     public void CanMove()

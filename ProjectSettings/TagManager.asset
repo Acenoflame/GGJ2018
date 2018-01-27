@@ -18,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - newRobot
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 392442453
     locked: 0

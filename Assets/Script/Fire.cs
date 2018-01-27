@@ -13,6 +13,8 @@ public class Fire : MonoBehaviour {
 
 	public Vector3 targetPos;
 
+	public GameObject targetObject;
+
 	public float arcHeight = 3;
 
 	public float shootTime = 1F;
@@ -36,14 +38,14 @@ public class Fire : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+		targetPos = targetObject.transform.position;
 
 
 		if (Input.GetButtonDown ("Fire1") && canShoot && munitions > 0) {
 
 			bullet = (GameObject)Instantiate(prefab, new Vector3(this.transform.position.x,this.transform.position.y, 0), Quaternion.identity);
 			startPos = bullet.transform.position;
-			targetPos = new Vector3 (transform.position.x+10F,transform.position.y,0);
+			//targetPos = new Vector3 (transform.position.x+10F,transform.position.y,0);
 			canShoot = false;
 			currentTme = 0F;
 			munitions--;
@@ -67,7 +69,7 @@ public class Fire : MonoBehaviour {
 			bullet.transform.position = nextPos;
 
 				
-			if (bullet.transform.position.y == startPos.y) {
+			if (bullet.transform.position.y == targetObject.transform.position.y) {
 				Destroy (bullet);
 				bullet = null;
 				currentTme = 0F;

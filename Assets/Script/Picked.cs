@@ -16,7 +16,7 @@ public class Picked : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 
 
-		if (coll.gameObject.GetComponent<Movement> ()) {
+		if (coll.gameObject.GetComponent<MovementPlayer> ()) {
 			coll.gameObject.GetComponent<Fire> ().munitions++;
 			Destroy (this.gameObject);
 		}
