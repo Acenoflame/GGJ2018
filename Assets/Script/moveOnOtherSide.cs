@@ -28,10 +28,11 @@ public class moveOnOtherSide : MonoBehaviour {
 			}
 			
 			transform.Translate (new Vector3 (movX, movY) * Time.deltaTime * speed);
-			GetComponent<Animator> ().SetBool ("isWalking", true);
-		}
-	
-	}
+            GetComponent<Animator>().SetBool("isWalking", true);
+        }
+        else
+        GetComponent<Animator>().SetBool("isWalking", false);
+    }
 
 	void OnCollisionEnter2D(Collision2D coll) {
 
