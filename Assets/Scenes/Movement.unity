@@ -593,6 +593,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1956443067522810, guid: 70b829f866173e94c98cad1d7d2b19c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70b829f866173e94c98cad1d7d2b19c8, type: 2}
   m_IsPrefabParent: 0
@@ -804,6 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
+  _speed2: 5
   _player: {fileID: 1307373195}
   _target: {fileID: 23165848}
   strXLeftStick: P2Horizontal
