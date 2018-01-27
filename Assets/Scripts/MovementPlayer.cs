@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movement : MonoBehaviour {
+public class MovementPlayer : MonoBehaviour {
 
-	public int speed = 3;
+	public int _speed = 3;
 
     public Transform _player;
     public Transform _target;
@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour {
         movXRightStick = Input.GetAxis(strXRightStick);
         movYRightStick = Input.GetAxis(strYRightStick);
 
-        _player.Translate (new Vector3(movXLeftStick, movYLeftStick) *Time.deltaTime*speed);
-        _target.Translate (new Vector3(movXRightStick, movYRightStick) *Time.deltaTime*speed);
+        _player.Translate (new Vector3(movXLeftStick, movYLeftStick) *Time.deltaTime* _speed);
+        _target.Translate (new Vector3(movXRightStick, movYRightStick) *Time.deltaTime* _speed);
 	}
 }
