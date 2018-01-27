@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movement : MonoBehaviour {
+public class moveOnOtherSide : MonoBehaviour {
 
+	public string side = "Left";
 	public int speed = 3;
+	private float movX;
+	private float movY;
 
 	// Use this for initialization
 	void Start () {
@@ -12,14 +15,17 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 
-		float movX = Input.GetAxis ("Horizontal");
-		float movY = Input.GetAxis ("Vertical");
 
+		if (side == "Left") {
+			movX = 1F;
+			movY = 0F;
+		} else if (side == "Right") {
+			movX = -1F;
+			movY = 0F;
+		}
+			
 		transform.Translate (new Vector3(movX,movY)*Time.deltaTime*speed);
-		
-		this.GetComponent<Animator> ().SetBool ("isWalking", true);
-
+	
 	}
 }
