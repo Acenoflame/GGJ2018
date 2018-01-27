@@ -18,6 +18,7 @@ public class MovementPlayer : MonoBehaviour {
     float movXRightStick;
     float movYRightStick;
 
+    private bool _canMove = true;
 
     // Use this for initialization
     void Start () {
@@ -30,12 +31,21 @@ public class MovementPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        movXLeftStick = Input.GetAxis(strXLeftStick);
-        movYLeftStick = Input.GetAxis(strYLeftStick);
-        movXRightStick = Input.GetAxis(strXRightStick);
-        movYRightStick = Input.GetAxis(strYRightStick);
+        if (_canMove)
+        {
+            movXLeftStick = Input.GetAxis(strXLeftStick);
+            movYLeftStick = Input.GetAxis(strYLeftStick);
+            movXRightStick = Input.GetAxis(strXRightStick);
+            movYRightStick = Input.GetAxis(strYRightStick);
 
-        _player.Translate (new Vector3(movXLeftStick, movYLeftStick) *Time.deltaTime* _speed);
-        _target.Translate (new Vector3(movXRightStick, movYRightStick) *Time.deltaTime* _speed);
+            _player.Translate(new Vector3(movXLeftStick, movYLeftStick) * Time.deltaTime * _speed);
+            _target.Translate(new Vector3(movXRightStick, movYRightStick) * Time.deltaTime * _speed);
+        }
+
 	}
+
+    public void CanMove()
+    {
+        _canMove = !_canMove;
+    }
 }
