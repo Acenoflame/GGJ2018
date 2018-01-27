@@ -1,0 +1,668 @@
+fileFormatVersion: 2
+guid: 018b46a5160f60c438389a08431df124
+timeCreated: 1517052867
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Walking_anim_oldRobot_v2_0
+    21300002: Walking_anim_oldRobot_v2_1
+    21300004: Walking_anim_oldRobot_v2_2
+    21300006: Walking_anim_oldRobot_v2_3
+    21300008: Walking_anim_oldRobot_v2_4
+    21300010: Walking_anim_oldRobot_v2_5
+    21300012: Walking_anim_oldRobot_v2_6
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 11, y: -170}
+        - {x: 30, y: -158}
+        - {x: 32, y: -156}
+        - {x: 22, y: -171}
+        - {x: 22, y: -187}
+        - {x: 23, y: -188}
+        - {x: 80, y: -188}
+        - {x: 80, y: 170}
+        - {x: -30, y: 170}
+        - {x: -60, y: 143}
+        - {x: -98, y: -20}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -27}
+        - {x: -33, y: -30}
+        - {x: -30, y: -33}
+        - {x: -33, y: -36}
+      - - {x: 3, y: -33}
+        - {x: 3, y: -33}
+      physicsShape:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 11, y: -170}
+        - {x: 30, y: -158}
+        - {x: 32, y: -156}
+        - {x: 22, y: -171}
+        - {x: 22, y: -187}
+        - {x: 23, y: -188}
+        - {x: 80, y: -188}
+        - {x: 80, y: 170}
+        - {x: -30, y: 170}
+        - {x: -60, y: 143}
+        - {x: -98, y: -20}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -27}
+        - {x: -33, y: -30}
+        - {x: -30, y: -33}
+        - {x: -33, y: -36}
+      - - {x: 3, y: -33}
+        - {x: 3, y: -33}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 10, y: -176}
+        - {x: 42, y: -188}
+        - {x: 86, y: -188}
+        - {x: 86, y: 170}
+        - {x: -42, y: 170}
+        - {x: -80, y: 152}
+        - {x: -98, y: -8}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: 39, y: -123}
+        - {x: 39, y: -123}
+      - - {x: 27, y: -111}
+        - {x: 27, y: -108}
+        - {x: 30, y: -111}
+        - {x: 33, y: -111}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -33}
+        - {x: -33, y: -39}
+      physicsShape:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 10, y: -176}
+        - {x: 42, y: -188}
+        - {x: 86, y: -188}
+        - {x: 86, y: 170}
+        - {x: -42, y: 170}
+        - {x: -80, y: 152}
+        - {x: -98, y: -8}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: 39, y: -123}
+        - {x: 39, y: -123}
+      - - {x: 27, y: -111}
+        - {x: 27, y: -108}
+        - {x: 30, y: -111}
+        - {x: 33, y: -111}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -33}
+        - {x: -33, y: -39}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 11, y: -170}
+        - {x: 31, y: -159}
+        - {x: 44, y: -147}
+        - {x: 34, y: -171}
+        - {x: 34, y: -187}
+        - {x: 36, y: -188}
+        - {x: 91, y: -188}
+        - {x: 92, y: -186}
+        - {x: 92, y: 170}
+        - {x: -42, y: 170}
+        - {x: -80, y: 152}
+        - {x: -98, y: -8}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: 33, y: -117}
+        - {x: 33, y: -114}
+        - {x: 30, y: -111}
+        - {x: 33, y: -105}
+        - {x: 33, y: -114}
+        - {x: 36, y: -117}
+      - - {x: 51, y: -93}
+        - {x: 51, y: -99}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -33}
+        - {x: -33, y: -39}
+      physicsShape:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 11, y: -170}
+        - {x: 31, y: -159}
+        - {x: 44, y: -147}
+        - {x: 34, y: -171}
+        - {x: 34, y: -187}
+        - {x: 36, y: -188}
+        - {x: 91, y: -188}
+        - {x: 92, y: -186}
+        - {x: 92, y: 170}
+        - {x: -42, y: 170}
+        - {x: -80, y: 152}
+        - {x: -98, y: -8}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: 33, y: -117}
+        - {x: 33, y: -114}
+        - {x: 30, y: -111}
+        - {x: 33, y: -105}
+        - {x: 33, y: -114}
+        - {x: 36, y: -117}
+      - - {x: 51, y: -93}
+        - {x: 51, y: -99}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -33}
+        - {x: -33, y: -39}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 11, y: -170}
+        - {x: 31, y: -159}
+        - {x: 44, y: -147}
+        - {x: 34, y: -171}
+        - {x: 34, y: -187}
+        - {x: 36, y: -188}
+        - {x: 91, y: -188}
+        - {x: 92, y: -186}
+        - {x: 92, y: 170}
+        - {x: -76, y: 170}
+        - {x: -98, y: 166}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: 33, y: -117}
+        - {x: 33, y: -114}
+        - {x: 30, y: -111}
+        - {x: 33, y: -105}
+        - {x: 33, y: -114}
+        - {x: 36, y: -117}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -27}
+        - {x: -33, y: -30}
+        - {x: -30, y: -33}
+        - {x: -33, y: -36}
+      - - {x: 3, y: -33}
+        - {x: 3, y: -33}
+      physicsShape:
+      - - {x: -15, y: -125}
+        - {x: -20, y: -118}
+        - {x: -27, y: -113}
+        - {x: -34, y: -86}
+        - {x: -14, y: -126}
+        - {x: -15, y: -145}
+        - {x: -10, y: -152}
+        - {x: 11, y: -170}
+        - {x: 31, y: -159}
+        - {x: 44, y: -147}
+        - {x: 34, y: -171}
+        - {x: 34, y: -187}
+        - {x: 36, y: -188}
+        - {x: 91, y: -188}
+        - {x: 92, y: -186}
+        - {x: 92, y: 170}
+        - {x: -76, y: 170}
+        - {x: -98, y: 166}
+        - {x: -98, y: -188}
+        - {x: -41, y: -188}
+        - {x: -38, y: -185}
+        - {x: -38, y: -173}
+        - {x: -16, y: -147}
+      - - {x: 33, y: -117}
+        - {x: 33, y: -114}
+        - {x: 30, y: -111}
+        - {x: 33, y: -105}
+        - {x: 33, y: -114}
+        - {x: 36, y: -117}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -33, y: -27}
+        - {x: -33, y: -30}
+        - {x: -30, y: -33}
+        - {x: -33, y: -36}
+      - - {x: 3, y: -33}
+        - {x: 3, y: -33}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: -151}
+        - {x: 27, y: -131}
+        - {x: 22, y: -124}
+        - {x: 15, y: -113}
+        - {x: 27, y: -127}
+        - {x: 33, y: -129}
+        - {x: 29, y: -165}
+        - {x: 22, y: -171}
+        - {x: 22, y: -187}
+        - {x: 24, y: -188}
+        - {x: 79, y: -188}
+        - {x: 80, y: -186}
+        - {x: 80, y: -177}
+        - {x: 69, y: -166}
+        - {x: 63, y: -161}
+        - {x: 80, y: -50}
+        - {x: 80, y: 170}
+        - {x: -35, y: 170}
+        - {x: -70, y: 147}
+        - {x: -92, y: 1}
+        - {x: -92, y: -135}
+        - {x: -87, y: -140}
+        - {x: -65, y: -140}
+        - {x: -64, y: -138}
+        - {x: -87, y: -179}
+        - {x: -91, y: -188}
+        - {x: -31, y: -188}
+        - {x: -25, y: -172}
+        - {x: -33, y: -171}
+        - {x: 16, y: -167}
+      - - {x: -3, y: -129}
+        - {x: -3, y: -141}
+      - - {x: -45, y: -63}
+        - {x: -45, y: -72}
+        - {x: -42, y: -75}
+        - {x: -45, y: -78}
+      - - {x: -39, y: -57}
+        - {x: -39, y: -57}
+      - - {x: -33, y: -51}
+        - {x: -33, y: -51}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -36, y: -33}
+        - {x: -39, y: -27}
+        - {x: -30, y: -33}
+        - {x: -33, y: -36}
+      physicsShape:
+      - - {x: 27, y: -151}
+        - {x: 27, y: -131}
+        - {x: 22, y: -124}
+        - {x: 15, y: -113}
+        - {x: 27, y: -127}
+        - {x: 33, y: -129}
+        - {x: 29, y: -165}
+        - {x: 22, y: -171}
+        - {x: 22, y: -187}
+        - {x: 24, y: -188}
+        - {x: 79, y: -188}
+        - {x: 80, y: -186}
+        - {x: 80, y: -177}
+        - {x: 69, y: -166}
+        - {x: 63, y: -161}
+        - {x: 80, y: -50}
+        - {x: 80, y: 170}
+        - {x: -35, y: 170}
+        - {x: -70, y: 147}
+        - {x: -92, y: 1}
+        - {x: -92, y: -135}
+        - {x: -87, y: -140}
+        - {x: -65, y: -140}
+        - {x: -64, y: -138}
+        - {x: -87, y: -179}
+        - {x: -91, y: -188}
+        - {x: -31, y: -188}
+        - {x: -25, y: -172}
+        - {x: -33, y: -171}
+        - {x: 16, y: -167}
+      - - {x: -3, y: -129}
+        - {x: -3, y: -141}
+      - - {x: -45, y: -63}
+        - {x: -45, y: -72}
+        - {x: -42, y: -75}
+        - {x: -45, y: -78}
+      - - {x: -39, y: -57}
+        - {x: -39, y: -57}
+      - - {x: -33, y: -51}
+        - {x: -33, y: -51}
+      - - {x: -27, y: -45}
+        - {x: -27, y: -45}
+      - - {x: -36, y: -33}
+        - {x: -39, y: -27}
+        - {x: -30, y: -33}
+        - {x: -33, y: -36}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_5
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 80, y: 176}
+        - {x: -46, y: 176}
+        - {x: -122, y: -11}
+        - {x: -122, y: -138}
+        - {x: -103, y: -140}
+        - {x: -70, y: -143}
+        - {x: -63, y: -133}
+        - {x: -63, y: -107}
+        - {x: -70, y: -100}
+        - {x: -63, y: -95}
+        - {x: -62, y: -120}
+        - {x: -60, y: -122}
+        - {x: -62, y: -126}
+        - {x: -64, y: -151}
+        - {x: -86, y: -188}
+        - {x: 80, y: -188}
+      - - {x: -33, y: -129}
+        - {x: -33, y: -135}
+      physicsShape:
+      - - {x: 80, y: 176}
+        - {x: -46, y: 176}
+        - {x: -122, y: -11}
+        - {x: -122, y: -138}
+        - {x: -103, y: -140}
+        - {x: -70, y: -143}
+        - {x: -63, y: -133}
+        - {x: -63, y: -107}
+        - {x: -70, y: -100}
+        - {x: -63, y: -95}
+        - {x: -62, y: -120}
+        - {x: -60, y: -122}
+        - {x: -62, y: -126}
+        - {x: -64, y: -151}
+        - {x: -86, y: -188}
+        - {x: 80, y: -188}
+      - - {x: -33, y: -129}
+        - {x: -33, y: -135}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking_anim_oldRobot_v2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -163}
+        - {x: 16, y: -167}
+        - {x: 26, y: -150}
+        - {x: 26, y: -132}
+        - {x: 24, y: -130}
+        - {x: 21, y: -125}
+        - {x: 15, y: -123}
+        - {x: 15, y: -113}
+        - {x: 17, y: -118}
+        - {x: 22, y: -126}
+        - {x: 24, y: -128}
+        - {x: 28, y: -128}
+        - {x: 28, y: -166}
+        - {x: 23, y: -165}
+        - {x: 16, y: -171}
+        - {x: 16, y: -188}
+        - {x: 80, y: -188}
+        - {x: 80, y: 176}
+        - {x: -51, y: 176}
+        - {x: -92, y: 80}
+        - {x: -92, y: -154}
+        - {x: -65, y: -140}
+        - {x: -64, y: -138}
+        - {x: -87, y: -179}
+        - {x: -91, y: -188}
+        - {x: -31, y: -188}
+        - {x: -25, y: -172}
+        - {x: -33, y: -171}
+        - {x: -34, y: -120}
+      - - {x: -3, y: -129}
+        - {x: -3, y: -141}
+      - - {x: -44, y: -68}
+        - {x: -42, y: -69}
+        - {x: -39, y: -75}
+        - {x: -43, y: -73}
+      - - {x: -33, y: -36}
+        - {x: -36, y: -33}
+        - {x: -33, y: -30}
+        - {x: -33, y: -36}
+        - {x: -30, y: -39}
+        - {x: -33, y: -39}
+      physicsShape:
+      - - {x: -31, y: -163}
+        - {x: 16, y: -167}
+        - {x: 26, y: -150}
+        - {x: 26, y: -132}
+        - {x: 24, y: -130}
+        - {x: 21, y: -125}
+        - {x: 15, y: -123}
+        - {x: 15, y: -113}
+        - {x: 17, y: -118}
+        - {x: 22, y: -126}
+        - {x: 24, y: -128}
+        - {x: 28, y: -128}
+        - {x: 28, y: -166}
+        - {x: 23, y: -165}
+        - {x: 16, y: -171}
+        - {x: 16, y: -188}
+        - {x: 80, y: -188}
+        - {x: 80, y: 176}
+        - {x: -51, y: 176}
+        - {x: -92, y: 80}
+        - {x: -92, y: -154}
+        - {x: -65, y: -140}
+        - {x: -64, y: -138}
+        - {x: -87, y: -179}
+        - {x: -91, y: -188}
+        - {x: -31, y: -188}
+        - {x: -25, y: -172}
+        - {x: -33, y: -171}
+        - {x: -34, y: -120}
+      - - {x: -3, y: -129}
+        - {x: -3, y: -141}
+      - - {x: -44, y: -68}
+        - {x: -42, y: -69}
+        - {x: -39, y: -75}
+        - {x: -43, y: -73}
+      - - {x: -33, y: -36}
+        - {x: -36, y: -33}
+        - {x: -33, y: -30}
+        - {x: -33, y: -36}
+        - {x: -30, y: -39}
+        - {x: -33, y: -39}
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
