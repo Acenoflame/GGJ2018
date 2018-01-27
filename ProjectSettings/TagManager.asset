@@ -19,9 +19,9 @@ TagManager:
   - 
   - 
   - newRobot
-  - 
-  - 
-  - 
+  - oldRobot
+  - Barrier
+  - Shoot
   - 
   - 
   - 

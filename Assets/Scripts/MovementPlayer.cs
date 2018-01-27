@@ -22,8 +22,6 @@ public class MovementPlayer : MonoBehaviour {
 
     private bool _canMove = true;
 
-	private float prevX;
-	private float prevY;
 
     // Use this for initialization
     void Start () {
@@ -43,24 +41,34 @@ public class MovementPlayer : MonoBehaviour {
             movXRightStick = Input.GetAxis(strXRightStick);
             movYRightStick = Input.GetAxis(strYRightStick);
 
-            if (movXLeftStick < 0)
-                _player.localScale.Scale(new Vector3(-0.4F, _player.localScale.y, _player.localScale.z));
 
 
             _player.Translate(new Vector3(movXLeftStick, movYLeftStick) * Time.deltaTime * _speed);
 
             _target.Translate(new Vector3(movXRightStick, movYRightStick) * Time.deltaTime * _speed2);
 
-            if (prevX != movXLeftStick || prevY != movYLeftStick)
-                GetComponent<Animator>().SetBool("isWalking", true);
-            else
-                GetComponent<Animator>().SetBool("isWalking", false);
+			if (movXLeftStick > 0 || movYLeftStick > 0)
+			{
+				GetComponent<Animator>().SetBool("isWalking", true);
+				this.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f); //(c# code)
+			}
+			else if (movXLeftStick < 0 || movYLeftStick < 0)
+			{
+				GetComponent<Animator>().SetBool("isWalking", true);
+				this.transform.localScale = new Vector3(-0.4f, 0.4f, 0.4f); //(c# code)
+			}
+			else
+			{
+				GetComponent<Animator>().SetBool("isWalking", false);
+			}
 
-            prevX = movXLeftStick;
-            prevY = movYLeftStick;
 
             GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 10f) * -1;
         }
+
+
+
+
 	}
 
     public void CanMove()

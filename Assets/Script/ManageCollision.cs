@@ -24,7 +24,7 @@ public class ManageCollision : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Attack1")
         {
-            mp.CanMove();  //Set movement to false
+           // mp.CanMove();  //Set movement to false
 
             Transform _tmpPosition = sac.GetPositionRandomSelectedRobot(1); //Destroy robot too
 
@@ -42,7 +42,7 @@ public class ManageCollision : MonoBehaviour {
 
             sac.UpdateRobotLists();
 
-            mp.CanMove();   //Set movement to true
+         //   mp.CanMove();   //Set movement to true
         }
 
     }

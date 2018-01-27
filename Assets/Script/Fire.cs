@@ -23,8 +23,9 @@ public class Fire : MonoBehaviour {
 
 	private float currentTme = 0F;
 
-
 	Vector3 startPos;
+
+	public string buttonShoot;
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +42,7 @@ public class Fire : MonoBehaviour {
 		targetPos = targetObject.transform.position;
 
 
-		if (Input.GetButtonDown ("Fire1") && canShoot && munitions > 0) {
+		if (Input.GetButtonDown (buttonShoot) && canShoot && munitions > 0) {
 
 			bullet = (GameObject)Instantiate(prefab, new Vector3(this.transform.position.x,this.transform.position.y, 0), Quaternion.identity);
 			startPos = bullet.transform.position;
@@ -49,6 +50,7 @@ public class Fire : MonoBehaviour {
 			canShoot = false;
 			currentTme = 0F;
 			munitions--;
+			Debug.Log (buttonShoot);
 		}
 
 		if (bullet != null && !parabola) {

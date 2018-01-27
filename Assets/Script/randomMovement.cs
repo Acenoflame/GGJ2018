@@ -52,6 +52,21 @@ public class randomMovement : MonoBehaviour {
 		if (currentTime > waitTime) {
 			transform.Translate (new Vector3 (movX, movY) * Time.deltaTime * speed);
 			GetComponent<Animator> ().SetBool ("isWalking", true);
+
+			if (movX > 0 || movY > 0)
+			{
+				
+				this.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f); //(c# code)
+			}
+			else if (movX < 0 || movY < 0)
+			{
+				
+				this.transform.localScale = new Vector3(-0.4f, 0.4f, 0.4f); //(c# code)
+			}
+			else
+			{
+				GetComponent<Animator>().SetBool("isWalking", false);
+			}
 		}
 		else 
 			GetComponent<Animator> ().SetBool ("isWalking", false);
