@@ -32,12 +32,12 @@ public class InitialMenu : MonoBehaviour
 
     void Update()
     {
-            if (last == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1")))
+            if (last == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1"))|| Input.GetButtonDown("Restart"))
             {
             
                 SceneManager.LoadScene("Test");
             }
-            if (goToTutorial == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1")))
+            if (goToTutorial == true && Input.GetButtonDown("Restart"))
             {
 
             canTutorial = true;
