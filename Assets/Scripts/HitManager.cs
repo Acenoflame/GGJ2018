@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HitManager : MonoBehaviour {
 
@@ -17,6 +18,12 @@ public class HitManager : MonoBehaviour {
     public GameObject gear2;
     public GameObject gear3;
     public Text Timer;
+    public GameObject p1win;
+    public GameObject p2win;
+    public bool canRestart;
+    public AudioClip Theme;
+    public AudioClip storm;
+    AudioSource audioSource;
 
     private float timerValue = 60;
 
@@ -24,7 +31,12 @@ public class HitManager : MonoBehaviour {
     void Start () {
         sac1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<SelectAnotherCharacter>();
         sac2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<SelectAnotherCharacter>();
-	}
+        canRestart = false;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(Theme);
+        audioSource.PlayOneShot(storm);
+        Time.timeScale = 1;
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,6 +58,9 @@ public class HitManager : MonoBehaviour {
             gear3.SetActive(false);
         if (_pointsP1 == 0)
             hack3.SetActive(false);
+        if (canRestart = true && Input.GetButtonDown("Restart"))
+            SceneManager.LoadScene("MenuIniziale");
+            
     }
 
     void BeginCountdown()
@@ -83,10 +98,14 @@ public class HitManager : MonoBehaviour {
         if(_pointsP1<=0)
         {
             Debug.Log("Player 1 WINS");
+            p2win.SetActive(true);
+            Time.timeScale = 0f;
         }
         else if (_pointsP2 <= 0)
         {
             Debug.Log("Player 2 WINS");
+            p1win.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -95,10 +114,14 @@ public class HitManager : MonoBehaviour {
         if (_pointsP1 < _pointsP2)
         {
             Debug.Log("Player 2 WINS");
+            p1win.SetActive(true);
+            Time.timeScale = 0f;
         }
         else if (_pointsP2 < _pointsP1)
         {
             Debug.Log("Player 1 WINS");
+            p2win.SetActive(true);
+            Time.timeScale = 0f;
         }
         else if(_pointsP1 == _pointsP2)
         {

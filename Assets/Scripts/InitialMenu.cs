@@ -32,11 +32,12 @@ public class InitialMenu : MonoBehaviour
 
     void Update()
     {
-            if (last == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+            if (last == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1")))
             {
+            
                 SceneManager.LoadScene("Test");
             }
-            if (goToTutorial == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+            if (goToTutorial == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1")))
             {
 
             canTutorial = true;
@@ -60,7 +61,7 @@ public class InitialMenu : MonoBehaviour
                 playerUno.SetActive(true);
             }
 
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("P2Fire1"))
             {
                 if (canBePlayed2 == true)
                 {

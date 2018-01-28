@@ -27,14 +27,18 @@ public class Fire : MonoBehaviour {
 
 	public string buttonShoot;
 
-	// Use this for initialization
-	void Start () {
+    public AudioClip Shot;
+    AudioSource audioSource;
+
+    // Use this for initialization
+    void Start () {
 
 		bullet = null;
 		startPos = transform.position;
 		canShoot = true;
-	
-	}
+        audioSource = GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,6 +54,8 @@ public class Fire : MonoBehaviour {
 			canShoot = false;
 			currentTme = 0F;
 			munitions--;
+            audioSource.PlayOneShot(Shot);
+            
 		}
 
 		if (bullet != null && !parabola) {
