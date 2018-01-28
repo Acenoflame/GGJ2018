@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HitManager : MonoBehaviour {
 
@@ -9,8 +10,15 @@ public class HitManager : MonoBehaviour {
 
     private int _pointsP1 = 3;
     private int _pointsP2 = 3;
+    public GameObject hack1;
+    public GameObject hack2;
+    public GameObject hack3;
+    public GameObject gear1;
+    public GameObject gear2;
+    public GameObject gear3;
+    public Text Timer;
 
-    private float timerValue = 5;
+    private float timerValue = 60;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +30,22 @@ public class HitManager : MonoBehaviour {
     void Update()
     {
         BeginCountdown();
+        if (timerValue > 0)
+            Timer.text = "Timer " + (int)timerValue;
+        else
+            Timer.text = "Time Expired";
+        if (_pointsP1 == 2)
+            hack1.SetActive(false);
+        if (_pointsP1 == 1)
+            hack2.SetActive(false);
+        if (_pointsP2 == 2)
+            gear1.SetActive(false);
+        if (_pointsP2 == 1)
+            gear2.SetActive(false);
+        if (_pointsP2 == 0)
+            gear3.SetActive(false);
+        if (_pointsP1 == 0)
+            hack3.SetActive(false);
     }
 
     void BeginCountdown()

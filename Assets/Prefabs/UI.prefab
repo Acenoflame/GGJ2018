@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224440008135544404}
   - component: {fileID: 222281852158269616}
   - component: {fileID: 114725089632966560}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 224568556927655490}
   - component: {fileID: 222885974860503590}
   - component: {fileID: 114109987144047010}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: hack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 224102381992692150}
   - component: {fileID: 222518321935240648}
   - component: {fileID: 114485454281812952}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: hack1empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 223990913008238158}
   - component: {fileID: 114346412096747546}
   - component: {fileID: 114092520135611058}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 224980185261590116}
   - component: {fileID: 222902915516501360}
   - component: {fileID: 114844904010246248}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: hack3empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 224934974998978716}
   - component: {fileID: 222663772989852164}
   - component: {fileID: 114928614772508608}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: hack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 224191683872124458}
   - component: {fileID: 222126420868234988}
   - component: {fileID: 114874002239560426}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: gear2empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 224366640952235856}
   - component: {fileID: 222909894579386182}
   - component: {fileID: 114496438919788358}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: gear2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 224146304485210588}
   - component: {fileID: 222230215200828100}
   - component: {fileID: 114537085461961370}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: gear3empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 224781571338628822}
   - component: {fileID: 222294739739368924}
   - component: {fileID: 114654597012561736}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: hack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 224466286231146282}
   - component: {fileID: 222871692763729484}
   - component: {fileID: 114716515432399612}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: gear3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 224286625454395474}
   - component: {fileID: 222906396818562396}
   - component: {fileID: 114801862043334648}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 224588597638907196}
   - component: {fileID: 222061580306405116}
   - component: {fileID: 114514233759397190}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: gear1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 224615007439160594}
   - component: {fileID: 222252814633050894}
   - component: {fileID: 114535231389188652}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: leftText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 224672313730189278}
   - component: {fileID: 222484665675869120}
   - component: {fileID: 114425608498796752}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: rightText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 224815811175299202}
   - component: {fileID: 222636806779330788}
   - component: {fileID: 114665154644802708}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: gear1empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 224495562111090892}
   - component: {fileID: 222015843755113046}
   - component: {fileID: 114406114833234026}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: hack2empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ Canvas:
   m_GameObject: {fileID: 1096912193139982}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
