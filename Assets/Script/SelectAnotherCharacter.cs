@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class SelectAnotherCharacter : MonoBehaviour {
 
-    private GameObject[] _listOfRobots;
+    private List<GameObject> _listOfRobots;
 
     private string _typeOfPlayer;
 
-	// Use this for initialization
-	void Start () {
+    private int _position;
+
+    // Use this for initialization
+    void Start () {
         if (this.tag.Equals("Player1"))
         {
             _typeOfPlayer = "Player1";
-            _listOfRobots = GameObject.FindGameObjectsWithTag("NewRobot");
+            _listOfRobots = new List<GameObject>(GameObject.FindGameObjectsWithTag("NewRobot"));
         }
         else if (this.tag.Equals("Player2"))
         {
             _typeOfPlayer = "Player2";
-            _listOfRobots = GameObject.FindGameObjectsWithTag("OldRobot");
+            _listOfRobots = new List<GameObject>(GameObject.FindGameObjectsWithTag("OldRobot"));
+        }
+
+        for(int i=0;i< _listOfRobots.Count; i++)
+        {
+            Debug.Log(_listOfRobots[i]);
         }
     }
 	
@@ -27,23 +34,26 @@ public class SelectAnotherCharacter : MonoBehaviour {
 		
 	}
 
-    public Transform GetPositionRandomSelectedRobot(int deleteRobot)
+    public Transform GetPositionRandomSelectedRobot()
     {
-        int _position = Random.Range(0, _listOfRobots.Length);
-        Transform _randomTransform = _listOfRobots[_position].transform;
-        if (deleteRobot == 1)
+        if(_listOfRobots.Count > 0)
         {
-            DeleteRobot(_position);
+            int _position = Random.Range(0, _listOfRobots.Count-1);
+            Debug.Log("_position: " + _position);
+            Debug.Log("_listOfRobots Length: " + _listOfRobots.Count);
+            SetPosition(_position);
+            Transform _randomTransform = _listOfRobots[_position].transform;
+            return _randomTransform;
         }
-        return _randomTransform;
+        return null;
     }
 
-    private void DeleteRobot(int deleteRobot)
+    public void DeleteRobot(int position)
     {
-        if (deleteRobot==1)
-        {
-            Destroy(_listOfRobots[deleteRobot].gameObject);
-        }
+        Debug.Log("Delete2");
+        GameObject g = _listOfRobots[position];
+        _listOfRobots.RemoveAt(position);
+        Destroy(g);
     }
 
     public string GetNamePlayer()
@@ -55,13 +65,25 @@ public class SelectAnotherCharacter : MonoBehaviour {
     {
         if (this.tag.Equals("Player1"))
         {
+            Debug.Log("Update1");
             _typeOfPlayer = "Player1";
-            _listOfRobots = GameObject.FindGameObjectsWithTag("NewRobot");
+            _listOfRobots = new List<GameObject>(GameObject.FindGameObjectsWithTag("NewRobot"));
         }
         else if (this.tag.Equals("Player2"))
         {
+            Debug.Log("Update2");
             _typeOfPlayer = "Player2";
-            _listOfRobots = GameObject.FindGameObjectsWithTag("OldRobot");
+            _listOfRobots = new List<GameObject>(GameObject.FindGameObjectsWithTag("OldRobot"));
         }
+    }
+
+    public int GetPosition()
+    {
+        return _position;
+    }
+
+    public void SetPosition(int pos)
+    {
+        _position = pos;
     }
 }

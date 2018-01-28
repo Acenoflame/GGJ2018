@@ -34,9 +34,9 @@ public class moveOnOtherSide : MonoBehaviour {
         GetComponent<Animator>().SetBool("isWalking", false);
     }
 
-	void OnCollisionEnter2D(Collision2D coll) {
+	/*void OnCollisionEnter2D(Collision2D coll) {
 
 		if (coll.gameObject.GetComponent<launchObject> ())
 			isMoving = true;
-	}
+	}*/
 }

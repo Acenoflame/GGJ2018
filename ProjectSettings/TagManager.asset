@@ -9,6 +9,8 @@ TagManager:
   - Player1
   - Player2
   - Attack1
+  - GameManager
+  - Attack2
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - oldRobot
   - Barrier
   - Shoot
-  - 
+  - Shoot2
   - 
   - 
   - 

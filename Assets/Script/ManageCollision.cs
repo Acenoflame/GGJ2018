@@ -6,6 +6,8 @@ public class ManageCollision : MonoBehaviour {
 
     private MovementPlayer mp;
     private SelectAnotherCharacter sac;
+    private HitManager hm;
+
     public GameObject _newRobot;
     public GameObject _oldRobot;
 
@@ -13,6 +15,7 @@ public class ManageCollision : MonoBehaviour {
     void Start () {
         mp = this.GetComponent<MovementPlayer>();
         sac = this.GetComponent<SelectAnotherCharacter>();
+        hm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<HitManager>();
     }
 	
 	// Update is called once per frame
@@ -22,27 +25,40 @@ public class ManageCollision : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Attack1")
+        if (coll.gameObject.tag.Equals("Attack2") || coll.gameObject.tag.Equals("Attack1"))
         {
-           // mp.CanMove();  //Set movement to false
+            mp.CanMove();  //Set movement to false
 
-            Transform _tmpPosition = sac.GetPositionRandomSelectedRobot(1); //Destroy robot too
+            Transform _tmpPosition = sac.GetPositionRandomSelectedRobot(); //Destroy robot too
 
-            string _namePlayer = sac.GetNamePlayer();
-            if (_namePlayer.Equals("Player1"))
+            if (_tmpPosition != null)
             {
-                Instantiate(_newRobot, this.transform.position, this.transform.rotation);
+                string _namePlayer = sac.GetNamePlayer();
+                if (_namePlayer.Equals("Player1"))
+                {
+                    GameObject go = Instantiate(_oldRobot, this.transform.position, this.transform.rotation);
+                }
+                else if (_namePlayer.Equals("Player2"))
+                {
+                    GameObject go = Instantiate(_newRobot, this.transform.position, this.transform.rotation);
+                }
+
+                this.transform.position = _tmpPosition.position;
+
+                sac.DeleteRobot(sac.GetPosition());
+
+                hm.UpdateLists(); //Update list of players
+
+                mp.CanMove();   //Set movement to true
+
+                sac.SetPosition(0);
             }
-            else if (_namePlayer.Equals("Player2"))
+            else
             {
-                Instantiate(_oldRobot, this.transform.position, this.transform.rotation);
+                Debug.LogError("Null returned. List empty");
             }
 
-            this.transform.position = _tmpPosition.position;
 
-            sac.UpdateRobotLists();
-
-         //   mp.CanMove();   //Set movement to true
         }
 
     }

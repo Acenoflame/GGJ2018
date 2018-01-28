@@ -50,7 +50,6 @@ public class Fire : MonoBehaviour {
 			canShoot = false;
 			currentTme = 0F;
 			munitions--;
-			Debug.Log (buttonShoot);
 		}
 
 		if (bullet != null && !parabola) {

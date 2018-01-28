@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 61710129832892608}
   - component: {fileID: 50541357082851086}
   - component: {fileID: 114989658692850454}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: ProiettileOld
-  m_TagString: Untagged
+  m_TagString: Attack2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
