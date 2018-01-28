@@ -14,11 +14,13 @@ public class SelectAnotherCharacter : MonoBehaviour {
     void Start () {
         if (this.tag.Equals("Player1"))
         {
+            Debug.Log("P1");
             _typeOfPlayer = "Player1";
             _listOfRobots = new List<GameObject>(GameObject.FindGameObjectsWithTag("NewRobot"));
         }
         else if (this.tag.Equals("Player2"))
         {
+            Debug.Log("P2");
             _typeOfPlayer = "Player2";
             _listOfRobots = new List<GameObject>(GameObject.FindGameObjectsWithTag("OldRobot"));
         }
@@ -36,11 +38,14 @@ public class SelectAnotherCharacter : MonoBehaviour {
 
     public Transform GetPositionRandomSelectedRobot()
     {
-        if(_listOfRobots.Count > 0)
+
+        UpdateRobotLists();
+
+        if (_listOfRobots.Count > 0)
         {
             int _position = Random.Range(0, _listOfRobots.Count-1);
             Debug.Log("_position: " + _position);
-            Debug.Log("_listOfRobots Length: " + _listOfRobots.Count);
+            Debug.Log("_listOfRobots Length: " + (_listOfRobots.Count-1));
             SetPosition(_position);
             Transform _randomTransform = _listOfRobots[_position].transform;
             return _randomTransform;

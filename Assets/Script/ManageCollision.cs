@@ -36,22 +36,26 @@ public class ManageCollision : MonoBehaviour {
                 string _namePlayer = sac.GetNamePlayer();
                 if (_namePlayer.Equals("Player1"))
                 {
+                    hm.DecreasePoints(1);
                     GameObject go = Instantiate(_oldRobot, this.transform.position, this.transform.rotation);
                 }
                 else if (_namePlayer.Equals("Player2"))
                 {
+                    hm.DecreasePoints(2);
                     GameObject go = Instantiate(_newRobot, this.transform.position, this.transform.rotation);
                 }
 
                 this.transform.position = _tmpPosition.position;
 
-                sac.DeleteRobot(sac.GetPosition());
+                //sac.DeleteRobot(sac.GetPosition());
 
-                hm.UpdateLists(); //Update list of players
+                Destroy(_tmpPosition.gameObject);
 
                 mp.CanMove();   //Set movement to true
 
                 sac.SetPosition(0);
+
+                hm.CheckVictoryCondition();
             }
             else
             {
