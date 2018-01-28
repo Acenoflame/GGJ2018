@@ -2,41 +2,93 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Audio;
 
-public class InitialMenu : MonoBehaviour {
+public class InitialMenu : MonoBehaviour
+{
 
     bool playerOne;
     bool playerTwo;
-    bool gameReady;
+    bool goToTutorial;
     public GameObject playerUno;
     public GameObject playerDue;
     public GameObject pressStart;
-	
-	
-	void Update ()
+    public GameObject toFadeIn;
+    public AudioClip menuSelection;
+    public AudioClip Theme;
+    AudioSource audioSource;
+    public bool canBePlayed1;
+    public bool canBePlayed2;
+    public bool canBePlayed3;
+    public bool canTutorial;
+    public bool last;
+    private void Start()
     {
-        if (gameReady == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
-        {
-            SceneManager.LoadScene("Test");
-        }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            playerOne = true;
-            playerUno.SetActive(true);
-        }
-
-        if (Input.GetButtonDown("Fire2"))
-        {
-            playerTwo = true;
-            playerDue.SetActive(true);
-        }
-
-        if (playerOne == true && playerTwo == true)
-        {
-            gameReady = true;
-            pressStart.SetActive(true);
-        } 
-
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(Theme);
 
     }
+
+
+    void Update()
+    {
+            if (last == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+            {
+                SceneManager.LoadScene("Test");
+            }
+            if (goToTutorial == true && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+            {
+
+            canTutorial = true;
+            if (canBePlayed3 == true)
+                {
+                audioSource.PlayOneShot(menuSelection, 1);
+                canBePlayed3 = false;
+                }
+                
+                
+                
+            }
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if  (canBePlayed1 == true)
+                {
+                    audioSource.PlayOneShot(menuSelection, 1);
+                }               
+                canBePlayed1 = false;
+                playerOne = true;
+                playerUno.SetActive(true);
+            }
+
+            if (Input.GetButtonDown("Fire2"))
+            {
+                if (canBePlayed2 == true)
+                {
+                    audioSource.PlayOneShot(menuSelection, 1);
+                }
+                canBePlayed2 = false;
+                playerTwo = true;
+                playerDue.SetActive(true);
+            }
+
+
+            if (playerOne == true && playerTwo == true)
+            {
+                goToTutorial = true;
+                pressStart.SetActive(true);
+
+            }
+            if (canTutorial == true)
+            {
+                toFadeIn.SetActive(true);
+                last = true;
+            }
+
+            
+
+
+
+            
+    }
 }
+
